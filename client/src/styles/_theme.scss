@@ -1,0 +1,35 @@
+@import '~@angular/material/theming';
+@import './component';
+
+@mixin light-dark-theme($primary, $accent, $warn) {
+    $theme: mat-light-theme($primary, $accent, $warn);
+    @include angular-material-theme($theme);
+    @include custom-theme($theme);
+
+    &.dark {
+        $theme: mat-dark-theme($primary, $accent, $warn);
+        @include angular-material-theme($theme);
+        @include custom-theme($theme);
+    }
+}
+
+@mixin custom-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+
+    @include custom-component($theme);
+}
+
+// @include mat-core();
+
+// @import 'themes/default';
+@import 'themes/intx';
+@import 'themes/rm';
+@import 'themes/im';
+@import 'themes/aruppink';
+@import 'themes/aruporange';
+@import 'themes/arupgreen';
+@import 'themes/arupblue';
+@import 'themes/aruppurple';
+
+@import './custom';

@@ -1,0 +1,7 @@
+@import '~@angular/material/theming';
+@import "./_theme.scss";
+
+
+$primary: mat-color($primary);
+$accent: mat-color($accent);
+$warn: mat-color($warn);

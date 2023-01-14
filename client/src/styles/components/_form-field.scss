@@ -1,0 +1,23 @@
+.form-field-round {
+	width: 200px;
+	height: 25px;
+	padding: 0 10px;
+	border-radius: 15px;
+	border: 1px solid #999;
+	background-color: white;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	.mat-select-value,
+	.mat-select-arrow {
+		text-align: left;
+		color: #333 !important;
+	}
+
+	input {
+		outline: none;
+		border: none;
+		width: 100%;
+	}
+}

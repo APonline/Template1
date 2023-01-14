@@ -1,0 +1,15 @@
+.content {
+  width:100%;
+  // min-height:450px;
+  box-sizing: border-box;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width:50%;
+}
+
+textarea {
+  min-height: 200px;
+}

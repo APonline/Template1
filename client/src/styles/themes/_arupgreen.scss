@@ -1,0 +1,40 @@
+
+$md-arupgreen: (
+    50 : #e5f5ee,
+    100 : #bfe7d5,
+    200 : #94d7b9,
+    300 : #69c79d,
+    400 : #48bb88,
+    500 : #28af73,
+    600 : #24a86b,
+    700 : #1e9f60,
+    800 : #189656,
+    900 : #0f8643,
+    A100 : #b8ffd4,
+    A200 : #85ffb5,
+    A400 : #52ff96,
+    A700 : #38ff87,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+.arupgreen-theme {
+    $primary: mat-palette($md-arupgreen, 500, 200, 800);
+    $accent: mat-palette($mat-intx-accent);
+    $warn: mat-palette($mat-red);
+    @include light-dark-theme($primary, $accent, $warn);
+}

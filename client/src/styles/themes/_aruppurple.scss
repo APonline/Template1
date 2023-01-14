@@ -1,0 +1,39 @@
+$md-aruppurple: (
+    50 : #edeef6,
+    100 : #d2d4e9,
+    200 : #b4b7da,
+    300 : #969acb,
+    400 : #8084bf,
+    500 : #696eb4,
+    600 : #6166ad,
+    700 : #565ba4,
+    800 : #4c519c,
+    900 : #3b3f8c,
+    A100 : #dddfff,
+    A200 : #aaaeff,
+    A400 : #777dff,
+    A700 : #5d65ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #ffffff,
+    )
+);
+
+.aruppurple-theme {
+    $primary: mat-palette($md-aruppurple, 500, 300, 700);
+    $accent: mat-palette($mat-intx-accent);
+    $warn: mat-palette($mat-red);
+    @include light-dark-theme($primary, $accent, $warn);
+}

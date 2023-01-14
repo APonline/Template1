@@ -1,0 +1,40 @@
+$md-aruppink: (
+    50 : #fae6ef,
+    100 : #f2c0d8,
+    200 : #e996be,
+    300 : #e06ca4,
+    400 : #d94d91,
+    500 : #d22d7d,
+    600 : #cd2875,
+    700 : #c7226a,
+    800 : #c11c60,
+    900 : #b6114d,
+    A100 : #ffe5ed,
+    A200 : #ffb2cb,
+    A400 : #ff7fa9,
+    A700 : #ff6597,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+.aruppink-theme {
+    $primary: mat-palette($md-aruppink, 300, 200, 800);
+    $accent: mat-palette($mat-intx-accent);
+    $warn: mat-palette($mat-red);
+    @include light-dark-theme($primary, $accent, $warn);
+}
+ 

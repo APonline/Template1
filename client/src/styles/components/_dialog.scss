@@ -1,0 +1,20 @@
+.transparent-dialog-container {
+  .mat-dialog-container {
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow-x: hidden;
+  }
+}
+
+.cdk-overlay-backdrop.dialog-backdrop-dark {
+    background: #ccce;
+}
+
+.loader .mat-dialog-container {
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+.cdk-overlay-backdrop.dialog-backdrop-loader {
+    background: rgba(0, 0, 0, 0.4);
+}

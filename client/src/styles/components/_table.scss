@@ -1,0 +1,69 @@
+@mixin custom-table($foreground, $background) {
+	.table-wrapper {
+		max-width: 80vw;
+		max-height: 80vh;
+		overflow: auto;
+	}
+	.table {
+		color: mat-color($foreground, text);
+		background-color: rgba(255, 255, 255, 0.2);
+		margin-top: 15px;
+
+		thead tr {
+			position: relative;
+		}
+		thead tr:first-child::before {
+			-webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' viewBox='0 0 100 100'  preserveAspectRatio='none'><polygon points='0,5 100,35 99,100 0,100'/></svg>");
+			opacity: 0.85;
+			margin-top: -20px;
+		}
+		thead tr:last-child::after {
+			-webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' viewBox='0 0 100 100'  preserveAspectRatio='none'><polygon points='0,0 100,0 100,80 0,100'/></svg>");
+			opacity: 0.5;
+		}
+		thead tr:first-child::before, thead tr:last-child::after {
+			content: "";
+			mask-size: 100% 100%;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			z-index: 0;
+			height: auto;
+		}
+		thead tr, tbody tr {
+			display: flex;
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
+			border-bottom-color: rgba(0,0,0,.12);
+		}
+		thead tr th, tbody tr td , tr th, tr td {
+			border: none;
+			padding: 0.6rem;
+			z-index: 1;
+			width: 200px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		thead tr th {
+			color: white;
+		}
+		tbody tr td, tbody td {
+			text-align: left;
+		}
+		thead tr:last-child {
+			border-bottom: none;
+		}
+		tbody {
+			display: block;
+			height: 100%;
+			overflow: auto;
+			@include mat-elevation(2, black , 0.8);
+		}
+		tbody tr:hover, thead th:hover {
+			background-color: mat-color($background, hover);
+		}
+	}
+}

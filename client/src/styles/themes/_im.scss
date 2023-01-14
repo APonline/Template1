@@ -1,0 +1,6 @@
+.im-theme {
+    $primary: mat-palette($mat-red, 800, 100, 900);
+    $accent: mat-palette($mat-intx-accent);
+    $warn: mat-palette($mat-red);
+    @include light-dark-theme($primary, $accent, $warn);
+} 

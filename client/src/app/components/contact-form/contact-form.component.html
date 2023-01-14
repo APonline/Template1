@@ -1,0 +1,22 @@
+<div class="content">
+  <form id="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Reason for Contact</mat-label>
+      <mat-select  formControlName="subject">
+        <mat-option *ngFor="let reason of contactReasons" [value]="reason.value" >
+          {{reason.value}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Message</mat-label>
+      <textarea matInput placeholder="Your message here..." formControlName="message"></textarea>
+    </mat-form-field>
+
+    <div class="submit">
+      <button type="submit">Submit</button>
+    </div>
+
+  </form>
+</div>

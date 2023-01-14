@@ -1,0 +1,6 @@
+.page-wrapper {
+    $primary: mat-palette($mat-deep-purple, 500);
+    $accent: mat-palette($mat-amber, A200, A100, A400);
+    $warn: mat-palette($mat-red);
+    @include light-dark-theme($primary, $accent, $warn);
+}
